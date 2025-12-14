@@ -1,0 +1,501 @@
+/* ================= THEME VARIABLES ================= */
+:root {
+  --bg: #020617;
+  --bg-soft: #020617;
+  --card: #020617;
+  --text: #e5e7eb;
+  --muted: #94a3b8;
+  --border: #1e293b;
+  --navbg: #020617;
+}
+
+html:not(.dark) {
+  --bg: #cfdceb;           /* deeper blue-gray */
+  --bg-soft: #bccfe3;
+  --card: #dbe7f3;
+  --text: #0b2545;         /* deep readable blue */
+  --muted: #334e68;
+  --border: #8fa8c1;
+  --navbg: #ebefff;
+}
+
+/* ================= BASE ================= */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 64px;
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  background: var(--navbg );
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  
+}
+
+html:not(.dark) .navbar {
+  background: var(--navbg );
+}
+
+.nav-container {
+  max-width: 1400px;
+  width: 100%;
+  margin: auto;
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #38bdf8;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-link {
+  font-size: 0.95rem;
+  font-weight: 500; 
+  opacity: 0.85;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  opacity: 1;
+}
+
+.contact-item {  
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid var(--card);
+}
+
+.theme-toggle {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--card);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+/* ================= HERO ================= */
+.hero {
+  padding-top: 6rem; /* navbar offset */
+  padding-bottom: 4rem;
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  max-width: 720px;
+  text-align: center;
+  z-index: 2;
+}
+
+.hero h2 {
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  color: #38bdf8;
+}
+
+.hero p {
+  margin-top: 0.8rem;
+  color: var(--muted);
+}
+
+.primary-btn {
+  margin-top: 2rem;
+  padding: 0.8rem 2.2rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #38bdf8, #0ea5e9);
+  color: #020617;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+/* ================= NETWORK BACKGROUND ================= */
+.network-bg::before,
+.network-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(
+    circle,
+    rgba(56, 189, 248, 0.6) 1px,
+    transparent 1px
+  );
+  background-size: 36px 36px;
+  animation: moveNet 26s linear infinite;
+  opacity: 0.18;
+}
+
+.network-bg::after {
+  animation-direction: reverse;
+}
+
+html:not(.dark) .network-bg::before,
+html:not(.dark) .network-bg::after {
+  opacity: 0.3;
+}
+
+@keyframes moveNet {
+  from { background-position: 0 0; }
+  to   { background-position: 200px 200px; }
+}
+
+/* ================= SECTIONS ================= */
+.section {
+  padding: 6rem 1.5rem;
+}
+
+.section.muted {
+  background: var(--bg-soft);
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 3.5rem;
+}
+
+/* ================= PRICING GRID ================= */
+.pricing-grid {
+  max-width: 1500px;
+  margin: auto;
+  display: grid;
+  gap: 1.6rem;
+}
+
+@media (min-width: 1200px) {
+  .pricing-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (max-width: 1199px) {
+  .pricing-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ================= PRICING CARD ================= */
+.pricing-card {
+  background: var(--card);
+  border: 1px dashed var(--border);
+  border-radius: 1.4rem;
+  padding: 2rem 1.8rem;
+  min-height: 400px; /* long vertical */
+  display: flex;
+  flex-direction: column;
+  transition: 0.4s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-10px);
+}
+
+.pricing-card h3 {
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+.speed {
+  color: #38bdf8;
+  margin: 0.6rem 0 1.2rem;
+  font-weight: 600;
+}
+
+.pricing-card ul {
+  margin-top: 1rem;
+  padding: 0;
+  list-style: none;
+}
+
+.pricing-card li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.65rem 0;
+  border-bottom: 1px dotted var(--border);
+  font-size: 0.95rem;
+}
+
+/* ================= CARD GLOWS ================= */
+.glow-blue:hover   { box-shadow: 0 0 28px rgba(56,189,248,0.25); }
+.glow-cyan:hover   { box-shadow: 0 0 28px rgba(34,211,238,0.25); }
+.glow-indigo:hover { box-shadow: 0 0 28px rgba(99,102,241,0.25); }
+.glow-sky:hover    { box-shadow: 0 0 28px rgba(14,165,233,0.25); }
+.glow-red:hover    { box-shadow: 0 0 28px rgba(239,68,68,0.25); }
+
+ /* ================= PLAN DETAIL CARDS ================= */
+.plan-detail-card {
+  max-width: 1200px;
+  margin: 0 auto 3.5rem;
+  padding: 2.5rem 3rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+/* Alternate alignment */
+.plan-detail-card.right {
+  flex-direction: row-reverse;
+}
+
+/* Icon */
+.plan-icon {
+  font-size: 3rem;
+  min-width: 70px;
+  text-align: center;
+}
+
+/* Content */
+.plan-content h3 {
+  font-size: 1.6rem;
+  color: #38bdf8;
+  margin-bottom: 0.8rem;
+}
+
+.plan-content p {
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+/* Animation visible */
+.plan-detail-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .plan-detail-card,
+  .plan-detail-card.right {
+    flex-direction: column;
+    text-align: left;
+    padding: 2rem;
+  }
+
+  .plan-icon {
+    font-size: 2.6rem;
+  }
+}
+
+/* ================= FOOTER ================= */
+.footer {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  background: var(--bg-soft);
+  color: var(--muted);
+}
+
+.footer .small {
+  font-size: 0.85rem;
+  margin-top: 0.4rem;
+}
+
+/* ================= WHATSAPP ================= */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #22c55e;
+  color: white;
+  font-size: 1.7rem;
+  padding: 14px;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  50% { transform: scale(1.08); }
+}
+/* ================= CONTACT GROUP ================= */
+.contact-group {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+/* Individual contact */
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  color: var(--text);
+  opacity: 0.85;
+  text-decoration: none;
+  padding: 0.3rem 0.6rem;
+  border-radius: 999px;
+  transition: background 0.3s ease, opacity 0.3s ease;
+}
+
+.contact-item:hover {
+  opacity: 1;
+  background: rgba(56, 189, 248, 0.15);
+}
+
+.contact-item .icon {
+  font-size: 1rem;
+}
+
+/* WhatsApp highlight */
+.contact-item.whatsapp {
+  border: 1px solid rgba(34, 197, 94, 0.5);
+}
+
+/* ================= MOBILE VIEW ================= */
+@media (max-width: 768px) {
+
+  /* Hide text, show icons only */
+  .contact-item .text {
+    display: none;
+  }
+
+  .contact-item {
+    padding: 0.45rem;
+    font-size: 1rem;
+  }
+
+  /* Slightly bigger icons for tap */
+  .contact-item .icon {
+    font-size: 1.1rem;
+  }
+
+  /* Reduce navbar clutter */
+  .nav-link {
+    display: none;
+  }
+}
+/* peering partners*/
+/* ================= PEERING PARTNER IMAGE ================= */
+
+.peering-image-wrapper {
+  max-width: 1200px;
+  margin: 3rem auto 0;
+  padding: 1.5rem 2rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 1.5rem;
+}
+
+/* Image behavior */
+.peering-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .peering-image-wrapper {
+    padding: 1.2rem;
+    border-radius: 1.2rem;
+  }
+
+  .peering-image {
+    max-height: 260px;
+  }
+}
+
+
+/* OTT APPS GRID */
+/* ================= OTT LOGOS ================= */
+ /* ================= OTT LOGO NORMALIZATION ================= */
+
+.ott-grid {
+  max-width: 1100px;
+  margin: 3rem auto 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 50px;
+  align-items: center;
+    
+}
+
+/* Fixed-size logo container */
+.ott-item {
+  height: 80px;                 /* Controls visual consistency */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--card); 
+  transition: transform 0.3s ease;
+  border-radius: 20%; 
+}
+
+/* Image scales INSIDE container */
+.ott-item img {
+  max-height: 100%;
+  max-width: 120%;
+  object-fit:cover;
+  border-radius: 20px;
+}
+
+/* Hover effect */
+.ott-item:hover {
+  transform: translateY(-6px);
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .ott-item {
+    height: 100px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .ott-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.4rem;
+  }
+
+  .ott-item {
+    height: 100px;
+    padding: 0.6rem 0.8rem;
+  }
+}
