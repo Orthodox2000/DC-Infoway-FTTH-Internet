@@ -1,11 +1,12 @@
-const btn = document.getElementById("themeToggle");
-const root = document.documentElement;
+const items = document.querySelectorAll('.animate');
 
-const saved = localStorage.getItem("theme");
-if (saved) root.classList.toggle("dark", saved === "dark");
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+}, { threshold: 0.2 });
 
-btn.onclick = () => {
-  const dark = root.classList.toggle("dark");
-  localStorage.setItem("theme", dark ? "dark" : "light");
-  btn.textContent = dark ? "🌙" : "☀️";
-};
+items.forEach(item => observer.observe(item));
+ 

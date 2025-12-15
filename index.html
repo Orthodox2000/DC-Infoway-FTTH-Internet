@@ -1,252 +1,244 @@
-<!DOCTYPE html>
-<html lang="en" class="dark">
+ <!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DC Infoway | FTTH Internet</title>
-
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>DC Infoway | Internet Service Provider</title>
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
 </head>
-
 <body>
+<!-- navbar-->
+  <header class="navbar">
+  <div class="nav-inner">
 
-<!-- NAVBAR -->
-<nav class="navbar">
-  <div class="nav-container">
+    <!-- LOGO -->
+    <div class="nav-brand">
+      <img src="assets/logo.png" alt="DC Infoway Logo">
+      <span>DC Infoway</span>
+    </div>
 
-    <!-- Logo -->
-    <h1 class="logo">DC Infoway</h1>
-
-    <!-- Right Side -->
-    <div class="nav-right">
-
-      <!-- Navigation Links (hide on small mobile if needed later) -->
+    <!-- NAV LINKS -->
+    <nav class="nav-links">
+      <a href="#home" class="nav-link active">Home</a>
       <a href="#plans" class="nav-link">Plans</a>
+      <a href="#features" class="nav-link">Services</a>
+      <a href="#ott" class="nav-link">OTT</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
 
-      <!-- Contact Items -->
-      <div class="contact-group">
+    <!-- CONTACT ACTIONS -->
+    <div class="nav-actions">
+      <a href="mailto:info@dcinfoway.com" class="icon-btn email">
+        ✉️ <span>Email</span>
+      </a>
+      <a href="https://wa.me/919819520514" class="icon-btn whatsapp">
+        <i class="fa fa-whatsapp" style="font-size:20px"></i> <span>WhatsApp</span>
+      </a>
+    </div>
 
-        <!-- Phone -->
-        <a href="tel:7045525727" class="contact-item">
-          <span class="icon">📞</span>
-          <span class="text">7045525727</span>
-        </a>
+  </div>
+</header>
 
-        <!-- Email -->
-        <a href="mailto:support@dcinfoway.net" class="contact-item">
-          <span class="icon">✉️</span>
-          <span class="text">support@dcinfoway.net</span>
-        </a>
+ <!-- Hero Card -->
+ <section class="ms-hero ms-hero-material active" id="home">
+  <span class="ms-hero-bg"></span>
 
-        <!-- WhatsApp -->
-        <a href="https://wa.me/917045525727" target="_blank" class="contact-item whatsapp">
-          <span class="icon">💬</span>
-          <span class="text">WhatsApp</span>
-        </a>
+  <div class="container">
+    <div class="hero-row">
 
+      <!-- LEFT CONTENT -->
+      <div class="hero-left animate animate glass-card">
+        <h1 class="company-name">DC INFOWAY</h1>
+        
+        <h2 class="proprietor">
+          Proprietor: <span>Yogesh Shilkar</span>
+        </h2>
+          <br>
+        <p class="hero-contact">
+            <strong>9819520514</strong> &nbsp; | &nbsp;
+            <strong>7045525727</strong>
+        </p>
+            <br>
+        <p class="hero-desc">
+          High-speed internet solutions for homes and businesses with
+          reliable connectivity, unlimited data, and 24×7 technical support.
+        </p>
+
+        <div class="hero-services">
+          <span>📷 CCTV Sales & Installation</span>
+          <span>💻 Computer & Laptop Sales</span>
+          <span>🛠️ Repair & Maintenance</span>
+          <span>🌍 Internet Service Provider</span>
+        </div>
+
+        <div class="hero-actions">
+          <a href="tel:9819520514" class="btn primary">Call Now</a>
+
+          <a href="https://wa.me/919819520514" class="btn secondary wa"><i class="fa fa-whatsapp" style="font-size:20px"></i> &nbsp;WhatsApp</a>
+        </div>
       </div>
 
-      <!-- Theme Toggle -->
-      <button id="themeToggle" class="theme-toggle" aria-label="Toggle Theme">
-        🌙
-      </button>
+      <!-- RIGHT IMAGE -->
+      <div class="hero-right animate">
+        <img src="assets/images.png" alt="Network Infrastructure">
+      </div>
 
     </div>
   </div>
-</nav>
-
-
-<!-- HERO -->
-<section class="hero">
-  <div class="network-bg"></div>
-
-  <div class="hero-content">
-    <h2>High Speed FTTH Internet</h2>
-    <p>Reliable Fiber Internet for Homes & Businesses in Kalwa</p>
-    <a href="#plans"><button class="primary-btn">Explore Plans</button></a>
-  </div>
 </section>
 
-<!-- OTT grid-->
-<section class="section" id="ott-apps">
-  <h2 class="section-title">OTT & Streaming Platforms Supported</h2>
-
-  <div class="ott-grid">
-  <div class="ott-item"><img src="assets/ott/netflix.png" alt="Netflix"></div>
-  <div class="ott-item"><img src="assets/ott/youtube.png" alt="YouTube"></div>
-  <div class="ott-item"><img src="assets/ott/prime-video.png" alt="Amazon Prime Video"></div>
-  <div class="ott-item"><img src="assets/ott/hotstar.png" alt="Disney+ Hotstar"></div>
-  <div class="ott-item"><img src="assets/ott/sonyliv.png" alt="Sony LIV"></div>
-  <div class="ott-item"><img src="assets/ott/zee5.png" alt="ZEE5"></div> 
-  <div class="ott-item"><img src="assets/ott/mx-player.png" alt="MX Player"></div>
-</div>
-
-</section>
-
-
-
-<!-- PRICING -->
-<section id="plans" class="section">
+<!-- ================= PLANS ================= -->
+<section class="section" id="plans">
   <h2 class="section-title">Subscription Plans</h2>
 
   <div class="pricing-grid">
 
-    <!-- ROCKET -->
-    <div class="pricing-card glow-blue">
-      <h3>🚀 ROCKET</h3>
-      <p class="speed">50 Mbps</p>
+    <div class="pricing-card animate rocket">
+      <h3>ROCKET</h3>
+      <span class="speed">100 Mbps</span>
+      <div class="divider"></div>
       <ul>
-        <li>30 Days <span>₹399</span></li>
-        <li>90 Days <span>₹1199</span></li>
-        <li>180 Days <span>₹1999</span></li>
-        <li>365 Days <span>₹3499</span></li>
+        <li>✔ Unlimited Data</li>
+        <li>✔ Monthly @ ₹500</li>
+        <li>✔ 6 Months @ ₹2,200</li>
+        <li>✔ 12 Months @ ₹3,710</li>
+        <li>✔ Ideal for streaming & browsing</li>
       </ul>
+      <button>ENQUIRY</button>
     </div>
 
-    <!-- AGNI -->
-    <div class="pricing-card glow-cyan">
-      <h3>🔥 AGNI</h3>
-      <p class="speed">100 Mbps</p>
+    <div class="pricing-card animate agni">
+      <h3>ROCKET 2.0</h3>
+      <span class="speed">200 Mbps</span>
+      <div class="divider"></div>
       <ul>
-        <li>30 Days <span>₹499</span></li>
-        <li>90 Days <span>₹1399</span></li>
-        <li>180 Days <span>₹2499</span></li>
-        <li>365 Days <span>₹4499</span></li>
+        <li>✔ Unlimited Data</li>
+        <li>✔ Monthly @ ₹700</li>
+        <li>✔ 6 Months @ ₹3,100</li>
+        <li>✔ 12 Months @ ₹4,800</li>
+        <li>✔ Best for work-from-home</li>
       </ul>
+      <button>ENQUIRY</button>
     </div>
 
-    <!-- AGNI+ -->
-    <div class="pricing-card glow-indigo">
-      <h3>⚡ AGNI+</h3>
-      <p class="speed">200 Mbps</p>
+    <div class="pricing-card animate agniplus">
+      <h3>AGNI</h3>
+      <span class="speed">500 Mbps</span>
+      <div class="divider"></div>
       <ul>
-        <li>30 Days <span>₹699</span></li>
-        <li>90 Days <span>₹1899</span></li>
-        <li>180 Days <span>₹3299</span></li>
-        <li>365 Days <span>₹6599</span></li>
+        <li>✔ Unlimited Data</li>
+        <li>✔ Monthly @ ₹900</li>
+        <li>✔ 6 Months @ ₹4,000</li>
+        <li>✔ 12 Months @ ₹6,960</li>
+        <li>✔ Heavy streaming & gaming</li>
       </ul>
+      <button>ENQUIRY</button>
     </div>
 
-    <!-- JET FIBER -->
-    <div class="pricing-card glow-sky">
-      <h3>🌐 JET FIBER</h3>
-      <p class="speed">500 Mbps</p>
+    <div class="pricing-card animate jet">
+      <h3>JET FIBER</h3>
+      <span class="speed">1 Gbps</span>
+      <div class="divider"></div>
       <ul>
-        <li>30 Days <span>₹899</span></li>
-        <li>90 Days <span>₹2599</span></li>
-        <li>180 Days <span>₹4599</span></li>
-        <li>365 Days <span>₹7599</span></li>
+        <li>✔ Unlimited Data</li>
+        <li>✔ Monthly @ ₹1,600</li>
+        <li>✔ 6 Months @ ₹6,960</li>
+        <li>✔ 12 Months @ ₹13,332</li>
+        <li>✔ Enterprise-grade speed</li>
       </ul>
-    </div>
-
-    <!-- JET FIBER+ -->
-    <div class="pricing-card glow-red">
-      <h3>🚀 JET FIBER+</h3>
-      <p class="speed">1 Gbps</p>
-      <ul>
-        <li>30 Days <span>₹1999</span></li>
-        <li>90 Days <span>₹4499</span></li>
-        <li>180 Days <span>₹7099</span></li>
-        <li>365 Days <span>₹11499</span></li>
-      </ul>
+      <button>ENQUIRY</button>
     </div>
 
   </div>
 </section>
 
-<!-- PLAN DETAILS -->
-<section class="section muted" id="plan-details">
-  <h2 class="section-title">Plan Details</h2>
-
-  <div class="plan-detail-card left animate-on-scroll">
-    <div class="plan-icon">🚀</div>
-    <div class="plan-content">
-      <h3>ROCKET – 50 Mbps</h3>
-      <p>
-        The ROCKET plan is designed for users with basic internet requirements.
-        It is ideal for web browsing, emails, online forms, and social media usage.
-        With stable and consistent connectivity, this plan suits individuals or
-        small households looking for affordable and reliable internet access.
-      </p>
-    </div>
+<!-- ================= PLAN DETAILS ================= -->
+<section class="plan-details">
+  <div class="plan-row animate">
+    <h3>Rocket & Rocket 2.0</h3>
+    <p>
+      Designed for residential users, these plans provide stable internet
+      speeds suitable for daily browsing, HD streaming, online classes,
+      and work-from-home usage.
+    </p>
   </div>
 
-  <div class="plan-detail-card right animate-on-scroll">
-    <div class="plan-icon">🔥</div>
-    <div class="plan-content">
-      <h3>AGNI – 100 Mbps</h3>
-      <p>
-        AGNI is perfect for families and homes with multiple connected devices.
-        It supports HD video streaming, online classes, video calls, and daily
-        entertainment needs. This plan ensures smooth performance even when
-        multiple users are active simultaneously.
-      </p>
-    </div>
+  <div class="plan-row animate right">
+    <h3>Agni & Jet Fiber</h3>
+    <p>
+      Built for power users, offices, and businesses requiring
+      ultra-fast speeds, uninterrupted uptime, secure connectivity,
+      and seamless cloud access.
+    </p>
   </div>
+</section>
 
-  <div class="plan-detail-card left animate-on-scroll">
-    <div class="plan-icon">⚡</div>
-    <div class="plan-content">
-      <h3>AGNI+ – 200 Mbps</h3>
-      <p>
-        AGNI+ is built for professionals and work-from-home users who need
-        dependable high-speed connectivity. It handles cloud applications,
-        video conferencing, large file uploads, and streaming without lag.
-        Ideal for productivity-focused users.
-      </p>
+<!-- ================= FEATURES ================= -->
+<section class="section" id="features">
+  <h2 class="section-title">Our Services</h2>
+
+  <div class="features-grid">
+    <div class="feature-card animate">
+      <h4>Fastest Internet</h4>
+      <p>Consistent high-speed connectivity with low latency.</p>
     </div>
-  </div>
 
-  <div class="plan-detail-card right animate-on-scroll">
-    <div class="plan-icon">🌐</div>
-    <div class="plan-content">
-      <h3>JET FIBER – 500 Mbps</h3>
-      <p>
-        JET FIBER is a high-performance plan suitable for gamers, content creators,
-        and offices. It supports multiple 4K streams, online gaming, heavy downloads,
-        and business operations with ease. Best for high-usage environments.
-      </p>
+    <div class="feature-card animate">
+      <h4>Quick Installation</h4>
+      <p>Hassle-free installation by trained technicians.</p>
     </div>
-  </div>
 
-  <div class="plan-detail-card left animate-on-scroll">
-    <div class="plan-icon">🚀</div>
-    <div class="plan-content">
-      <h3>JET FIBER+ – 1 Gbps</h3>
-      <p>
-        JET FIBER+ offers enterprise-grade internet connectivity for power users
-        and businesses. Designed for offices, servers, CCTV systems, and
-        high-bandwidth operations, it delivers ultra-fast, low-latency performance
-        for demanding professional workloads.
-      </p>
+    <div class="feature-card animate">
+      <h4>24×7 Support</h4>
+      <p>Dedicated technical support for uninterrupted service.</p>
+    </div>
+
+    <div class="feature-card animate">
+      <h4>DOT Certified ISP</h4>
+      <p>Government approved and trusted ISP provider.</p>
     </div>
   </div>
 </section>
 
-<!--peering partners-->
-<section class="section muted" id="peering-partners">
-  <h2 class="section-title">Our Peering & Network Partners</h2>
+<!-- ================= OTT ================= -->
+<section class="section" id="ott">
+  <h2 class="section-title">OTT Apps Supported</h2>
 
-  <div class="peering-image-wrapper">
-    <img
-      src="assets/s.png"
-      alt="Peering and Network Partners"
-      class="peering-image"
-    />
+  <div class="ott-grid">
+    <img src="assets/ott/netflix.png" alt="Netflix">
+    <img src="assets/ott/youtube.png" alt="YouTube">
+    <img src="assets/ott/prime-video.png" alt="Prime">
+    <img src="assets/ott/hotstar.png" alt="Hotstar">
+    <img src="assets/ott/sonyliv.png" alt="Hotstar">
+    <img src="assets/ott/zee5.png" alt="Hotstar">
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer class="footer">
-  <p>DC Infoway Pvt Ltd</p>
-  <p>support@dcinfoway.net | 7045525727</p>
-  <p class="small">Powered by Diksha Computer • Since 2010</p>
+<!-- ================= CONTACT ================= -->
+<section class="contact" id="contact">
+  <h2>Contact Us</h2>
+  <p><strong>Owner:</strong> Yogesh Shilkar</p>
+  <p>📞 9819520514 | 📱 7045525727</p>
+</section>
+ <script src="js/main.js"></script>
+<script src="js/theme.js"></script>
+</body>
+</html>
+
+  <div class="map">
+    <iframe
+      src="https://www.google.com/maps?q=Thane,Maharashtra&output=embed"
+      loading="lazy">
+    </iframe>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer"> 
 </footer>
 
-<a href="https://wa.me/917045525727" target="_blank" class="whatsapp-btn">💬</a>
 
-<script src="js/theme.js"></script>
-<script src="js/main.js"></script>
 </body>
 </html>
