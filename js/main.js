@@ -1,51 +1,33 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
+  const img = document.getElementById("heroImage");
 
-  /* ===== SCROLL ANIMATIONS ===== */
-  const animatedItems = document.querySelectorAll('.animate');
+  if (!img) return;
 
-  const observer = new IntersectionObserver(
-    entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('show');
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.2 }
-  );
+  const images = [
+    "assets/hero/qr.png",
+    "assets/hero/cctv.png" ,
+    "assets/hero/images.png",
+    "assets/hero/qr.png",
+    "assets/hero/laptop.png",
+     "assets/hero/ott.png",
+     
+  ];
 
-  animatedItems.forEach(item => {
-    // Skip hero elements (already visible)
-    if (!item.closest('.ms-hero')) {
-      observer.observe(item);
-    }
-  });
+  let index = 0;
 
-  /* ===== NAV SMOOTH SCROLL ===== */
-  const navLinks = document.querySelectorAll('.nav-link');
+  setInterval(() => {
+    // Shrink current image
+    img.classList.remove("scale-in");
+    img.classList.add("scale-out");
 
-  navLinks.forEach(link => {
-    link.addEventListener('click', e => {
-      const targetId = link.getAttribute('href');
-      if (!targetId || !targetId.startsWith('#')) return;
+    // Change image when fully shrunk
+    setTimeout(() => {
+      index = (index + 1) % images.length; 
+      img.src = images[index];
 
-      const target = document.querySelector(targetId);
-      if (!target) return;
+      img.classList.remove("scale-out");
+      img.classList.add("scale-in");
+    }, 600);
 
-      e.preventDefault();
-
-      const offset = 110; // navbar height
-      const y =
-        target.getBoundingClientRect().top +
-        window.pageYOffset -
-        offset;
-
-      window.scrollTo({
-        top: y,
-        behavior: 'smooth'
-      });
-    });
-  });
-
+  }, 4000);
 });

@@ -1,244 +1,417 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DC Infoway | Internet Service Provider</title>
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
- 
+  <script src="js/main.js" defer></script>
 </head>
+
 <body>
-<!-- navbar-->
+  <!-- navbar-->
   <header class="navbar">
-  <div class="nav-inner">
+    <div class="nav-inner">
 
-    <!-- LOGO -->
-    <div class="nav-brand">
-      <img src="assets/logo.png" alt="DC Infoway Logo">
-      <span>DC Infoway</span>
+      <!-- LOGO -->
+      <div class="nav-brand">
+        <img src="assets/logo.png" alt="DC Infoway Logo">
+        <span>DC Infoway</span>
+      </div>
+
+      <!-- NAV LINKS -->
+      <nav class="nav-links">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#plans" class="nav-link">Plans</a>
+        <a href="#features" class="nav-link">Services</a>
+        <a href="#ott" class="nav-link">OTT</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- CONTACT ACTIONS -->
+      <div class="nav-actions">
+        <a href="mailto:info@dcinfoway.com" class="icon-btn email">
+          ✉️ <span>Email</span>
+        </a>
+        <a href="https://wa.me/919819520514" class="icon-btn whatsapp">
+          <i class="fa fa-whatsapp" style="font-size:20px"></i> <span>WhatsApp</span>
+        </a>
+      </div>
+
     </div>
+  </header>
 
-    <!-- NAV LINKS -->
-    <nav class="nav-links">
-      <a href="#home" class="nav-link active">Home</a>
-      <a href="#plans" class="nav-link">Plans</a>
-      <a href="#features" class="nav-link">Services</a>
-      <a href="#ott" class="nav-link">OTT</a>
-      <a href="#contact" class="nav-link">Contact</a>
-    </nav>
+  <!-- Hero Card -->
+  <section class="ms-hero ms-hero-material active" id="home">
+    <span class="ms-hero-bg"></span>
 
-    <!-- CONTACT ACTIONS -->
-    <div class="nav-actions">
-      <a href="mailto:info@dcinfoway.com" class="icon-btn email">
-        ✉️ <span>Email</span>
-      </a>
-      <a href="https://wa.me/919819520514" class="icon-btn whatsapp">
-        <i class="fa fa-whatsapp" style="font-size:20px"></i> <span>WhatsApp</span>
-      </a>
+    <div class="container">
+      <div class="hero-row">
+
+        <!-- LEFT CONTENT -->
+        <div class="hero-left animate animate glass-card">
+          <h1 class="company-name">DC infoway Pvt. Ltd.</h1>
+
+          <h2 class="proprietor">
+            <span> Proprietor: Yogesh Shilkar</span>
+          </h2>
+          <br>
+          <p class="hero-contact">
+            <strong>+91 98195 20514</strong> &nbsp; | &nbsp;
+            <strong>+91 70455 25727</strong>
+          </p>
+          <br>
+          <p class="hero-desc">
+            High-speed internet solutions for homes and businesses with
+            reliable connectivity, unlimited data, and 24×7 technical support.
+          </p>
+
+          <div class="hero-services">
+            <span>📷 CCTV Sales & Installation</span>
+            <span>💻 Computer & Laptop Sales</span>
+            <span>🛠️ Repair & Maintenance</span>
+            <span>🌍 Internet Service Provider</span>
+          </div>
+
+          <div class="hero-actions">
+            <a href="tel:9819520514" class="btn primary">Call Now</a>
+
+            <a href="https://wa.me/919819520514" class="btn secondary wa"><i class="fa fa-whatsapp"
+                style="font-size:20px"></i> &nbsp;WhatsApp</a>
+          </div>
+        </div>
+
+        <!-- RIGHT IMAGE -->
+        <div class="hero-right animate">
+          <div class="hero-image-wrapper">
+            <img id="heroImage" src="assets/hero/images.png" alt="Service Image" loading="lazy">
+          </div>
+        </div>
+
+
+
+      </div>
     </div>
+  </section>
 
-  </div>
-</header>
+  <!-- ================= PLANS ================= -->
+  <section class="plans-section" id="plans">
+    <h2 class="section-title animate">Subscription Plans</h2>
 
- <!-- Hero Card -->
- <section class="ms-hero ms-hero-material active" id="home">
-  <span class="ms-hero-bg"></span>
+    <div class="plans-grid">
 
-  <div class="container">
-    <div class="hero-row">
+      <!-- ROCKET -->
+      <div class="plan-card rocket animate">
+        <div class="plan-header">
+          <h3>ROCKET</h3>
+          <p class="speed">50 Mbps</p>
+        </div>
+
+        <ul class="plan-list">
+          <li><span>30 Days</span><strong>₹399</strong></li>
+          <li><span>90 Days</span><strong>₹1199</strong></li>
+          <li><span>180 Days</span><strong>₹1999</strong></li>
+          <li><span>365 Days</span><strong>₹3499</strong></li>
+        </ul>
+
+        <button class="plan-btn" ><a href="https://wa.me/919819520514" style="text-decoration: none;color: inherit;">
+          Enquire Now</a></button>
+      </div>
+
+      <!-- AGNI -->
+      <div class="plan-card agni animate">
+        <div class="plan-header">
+          <h3>AGNI</h3>
+          <p class="speed">100 Mbps</p>
+        </div>
+
+        <ul class="plan-list">
+          <li><span>30 Days</span><strong>₹499</strong></li>
+          <li><span>90 Days</span><strong>₹1399</strong></li>
+          <li><span>180 Days</span><strong>₹2499</strong></li>
+          <li><span>365 Days</span><strong>₹4499</strong></li>
+        </ul>
+
+        <button class="plan-btn" ><a href="https://wa.me/919819520514" style="text-decoration: none;color: inherit;">
+          Enquire Now</a></button>
+      </div>
+
+      <!-- AGNI PLUS -->
+      <div class="plan-card agni-plus animate">
+        <div class="plan-header">
+          <h3>AGNI +</h3>
+          <p class="speed">200 Mbps</p>
+        </div>
+
+        <ul class="plan-list">
+          <li><span>30 Days</span><strong>₹699</strong></li>
+          <li><span>90 Days</span><strong>₹1899</strong></li>
+          <li><span>180 Days</span><strong>₹3299</strong></li>
+          <li><span>365 Days</span><strong>₹6599</strong></li>
+        </ul>
+
+        <button class="plan-btn" ><a href="https://wa.me/919819520514" style="text-decoration: none;color: inherit;">
+          Enquire Now</a></button>
+      </div>
+
+      <!-- JET FIBER -->
+      <div class="plan-card jet animate">
+        <div class="plan-header">
+          <h3>JET FIBER</h3>
+          <p class="speed">500 Mbps</p>
+        </div>
+
+        <ul class="plan-list">
+          <li><span>30 Days</span><strong>₹899</strong></li>
+          <li><span>90 Days</span><strong>₹2599</strong></li>
+          <li><span>180 Days</span><strong>₹4599</strong></li>
+          <li><span>365 Days</span><strong>₹7599</strong></li>
+        </ul>
+
+        <button class="plan-btn" ><a href="https://wa.me/919819520514" style="text-decoration: none;color: inherit;">
+          Enquire Now</a></button>
+      </div>
+
+      <!-- JET FIBER PLUS -->
+      <div class="plan-card jet-plus animate">
+        <div class="plan-header">
+          <h3>JET FIBER+</h3>
+          <p class="speed">1 Gbps</p>
+        </div>
+
+        <ul class="plan-list">
+          <li><span>30 Days</span><strong>₹1999</strong></li>
+          <li><span>90 Days</span><strong>₹4499</strong></li>
+          <li><span>180 Days</span><strong>₹7099</strong></li>
+          <li><span>365 Days</span><strong>₹11499</strong></li>
+        </ul>
+
+        <button class="plan-btn" ><a href="https://wa.me/919819520514" style="text-decoration: none;color: inherit;">
+          Enquire Now</a></button>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================= OTT ================= -->
+  <section class="section ott-section" id="ott">
+    <h2 class="section-title">OTT Apps Supported</h2>
+
+    <div class="ott-strip">
+      <div class="ott-track">
+
+        <div class="ott-group">
+          <img src="assets/ott/netflix.png" alt="Netflix">
+          <img src="assets/ott/youtube.png" alt="YouTube">
+          <img src="assets/ott/prime-video.png" alt="Prime Video">
+          <img src="assets/ott/hotstar.png" alt="Hotstar">
+          <img src="assets/ott/sonyliv.png" alt="Sony LIV">
+          <img src="assets/ott/zee5.png" alt="Zee5">
+          <img src="assets/ott/fancode.png" alt="Fancode">
+          <img src="assets/ott/alt.png" alt="Alt Balaji">
+        </div>
+
+        <!-- Duplicate group -->
+        <div class="ott-group">
+          <img src="assets/ott/netflix.png" alt="Netflix">
+          <img src="assets/ott/youtube.png" alt="YouTube">
+          <img src="assets/ott/prime-video.png" alt="Prime Video">
+          <img src="assets/ott/hotstar.png" alt="Hotstar">
+          <img src="assets/ott/sonyliv.png" alt="Sony LIV">
+          <img src="assets/ott/zee5.png" alt="Zee5">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FEATURES ================= -->
+  <section class="section" id="features">
+    <h2 class="section-title">Our Services</h2>
+
+    <div class="features-grid">
+      <div class="feature-card animate">
+        <h4>Fastest Internet</h4>
+        <p>Consistent high-speed connectivity with low latency.</p>
+      </div>
+
+      <div class="feature-card animate">
+        <h4>Quick Installation</h4>
+        <p>Hassle-free installation by trained technicians.</p>
+      </div>
+
+      <div class="feature-card animate">
+        <h4>24×7 Support</h4>
+        <p>Dedicated technical support for uninterrupted service.</p>
+      </div>
+
+      <div class="feature-card animate">
+        <h4>DOT Certified ISP</h4>
+        <p>Government approved and trusted ISP provider.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ABOUT ================= -->
+  <section class="about-section" id="about">
+    <h2 class="section-title">About Us</h2>
+
+    <div class="about-container">
+
+      <!-- LEFT STATS -->
+      <div class="about-stats animate">
+        <div class="stat">
+          <span class="icon">📡</span>
+          <h3>FTTH Internet</h3>
+          <p>High-speed fiber connectivity</p>
+        </div>
+
+        <div class="stat">
+          <span class="icon">📶</span>
+          <h3>24×7 Network</h3>
+          <p>Reliable & stable internet service</p>
+        </div>
+
+        <div class="stat">
+          <span class="icon">📷</span>
+          <h3>CCTV Solutions</h3>
+          <p>Installation & maintenance</p>
+        </div>
+
+        <div class="stat">
+          <span class="icon">💻</span>
+          <h3>IT Services</h3>
+          <p>Laptop & computer sales & repair</p>
+        </div>
+      </div>
+
+      <!-- RIGHT CONTENT -->
+      <div class="about-content animate">
+        <p>
+          <strong>DC Infoway</strong> is a reliable and customer-focused technology service provider,
+          delivering high-speed <strong>FTTH (Fiber To The Home) broadband internet</strong> solutions
+          for homes, small businesses, and commercial establishments.
+        </p>
+
+        <p>
+          We specialize in providing stable, low-latency, and high-performance fiber internet
+          connections designed to meet modern digital requirements such as online streaming,
+          work-from-home, cloud access, and business connectivity.
+        </p>
+
+        <p>
+          In addition to internet services, we offer complete
+          <strong>CCTV camera installation, configuration, and maintenance</strong>
+          solutions for residential, commercial, and office security needs.
+        </p>
+
+        <p>
+          Our technical services also include <strong>sales, repair, and maintenance of laptops,
+            desktop computers, networking equipment, and IT accessories</strong>,
+          ensuring dependable support for everyday computing requirements.
+        </p>
+
+        <p class="proprietor">
+          <strong>Company:</strong> DC Infoway Pvt. Ltd.<br>
+          <strong>Proprietor:</strong> Yogesh Shilkar
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= PEERING PARTNERS ================= -->
+  <section class="peering-section" id="partners">
+    <h2 class="section-title">Our Peering Partners</h2>
+
+    <div class="peering-carousel">
+      <div class="peering-track">
+
+        <div class="peering-item">
+          <img src="./assets/google.png" alt="Peering Partner 1">
+        </div>
+
+        <div class="peering-item">
+          <img src="./assets/akamai.png" alt="Peering Partner 2">
+        </div>
+
+        <div class="peering-item">
+          <img src="./assets/nixi.png" alt="Peering Partner 3">
+        </div>
+
+        <div class="peering-item">
+          <img src="./assets/limelight.png" alt="Peering Partner 4">
+        </div>
+
+        <div class="peering-item">
+          <img src="./assets/facebook.png" alt="Peering Partner 5">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer" id="contact">
+    <div class="footer-container">
 
       <!-- LEFT CONTENT -->
-      <div class="hero-left animate animate glass-card">
-        <h1 class="company-name">DC INFOWAY</h1>
-        
-        <h2 class="proprietor">
-          Proprietor: <span>Yogesh Shilkar</span>
-        </h2>
-          <br>
-        <p class="hero-contact">
-            <strong>9819520514</strong> &nbsp; | &nbsp;
-            <strong>7045525727</strong>
-        </p>
-            <br>
-        <p class="hero-desc">
-          High-speed internet solutions for homes and businesses with
-          reliable connectivity, unlimited data, and 24×7 technical support.
+      <div class="footer-info">
+        <h3 class="footer-title">DC Infoway Pvt. Ltd.</h3>
+
+        <p class="footer-text">
+          Reliable FTTH broadband and IT services provider delivering
+          high-speed internet, CCTV solutions, and computer services.
         </p>
 
-        <div class="hero-services">
-          <span>📷 CCTV Sales & Installation</span>
-          <span>💻 Computer & Laptop Sales</span>
-          <span>🛠️ Repair & Maintenance</span>
-          <span>🌍 Internet Service Provider</span>
+        <div class="footer-address">
+          <p>
+            <strong>Registered Office:</strong><br>
+            Manisha Nagar , Kalwa ,<br>
+            Thane, Maharashtra – 400610
+          </p>
+
         </div>
 
-        <div class="hero-actions">
-          <a href="tel:9819520514" class="btn primary">Call Now</a>
-
-          <a href="https://wa.me/919819520514" class="btn secondary wa"><i class="fa fa-whatsapp" style="font-size:20px"></i> &nbsp;WhatsApp</a>
+        <div class="footer-contacts">
+          <a href="tel:+919819520514">📞 +91 98195 20514</a>
+          <a href="https://wa.me/919819520514" target="_blank">💬 WhatsApp: 98195 20514</a>
+          <a href="mailto:info@dcinfoway.com">✉️ info@dcinfoway.com</a>
         </div>
       </div>
 
-      <!-- RIGHT IMAGE -->
-      <div class="hero-right animate">
-        <img src="assets/images.png" alt="Network Infrastructure">
+      <!-- RIGHT MAP -->
+      <div class="footer-map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d941.9872299304918!2d72.98802846950862!3d19.197433265404836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b92dc09b9f41%3A0xc06f6aa0bc56ecf8!2sAshtagandha%20Society%2C%20Shastri%20Nagar%2C%20Manisha%20Nagar%2C%20Kalwa%2C%20Thane%2C%20Maharashtra%20400605!5e0!3m2!1sen!2sin!4v1765977812024!5m2!1sen!2sin"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
 
     </div>
-  </div>
-</section>
 
-<!-- ================= PLANS ================= -->
-<section class="section" id="plans">
-  <h2 class="section-title">Subscription Plans</h2>
-
-  <div class="pricing-grid">
-
-    <div class="pricing-card animate rocket">
-      <h3>ROCKET</h3>
-      <span class="speed">100 Mbps</span>
-      <div class="divider"></div>
-      <ul>
-        <li>✔ Unlimited Data</li>
-        <li>✔ Monthly @ ₹500</li>
-        <li>✔ 6 Months @ ₹2,200</li>
-        <li>✔ 12 Months @ ₹3,710</li>
-        <li>✔ Ideal for streaming & browsing</li>
-      </ul>
-      <button>ENQUIRY</button>
+    <!-- BOTTOM -->
+    <div class="footer-bottom">
+      <p>© 2025 DC Infoway. All Rights Reserved.</p>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+      </div>
     </div>
+  </footer>
 
-    <div class="pricing-card animate agni">
-      <h3>ROCKET 2.0</h3>
-      <span class="speed">200 Mbps</span>
-      <div class="divider"></div>
-      <ul>
-        <li>✔ Unlimited Data</li>
-        <li>✔ Monthly @ ₹700</li>
-        <li>✔ 6 Months @ ₹3,100</li>
-        <li>✔ 12 Months @ ₹4,800</li>
-        <li>✔ Best for work-from-home</li>
-      </ul>
-      <button>ENQUIRY</button>
-    </div>
 
-    <div class="pricing-card animate agniplus">
-      <h3>AGNI</h3>
-      <span class="speed">500 Mbps</span>
-      <div class="divider"></div>
-      <ul>
-        <li>✔ Unlimited Data</li>
-        <li>✔ Monthly @ ₹900</li>
-        <li>✔ 6 Months @ ₹4,000</li>
-        <li>✔ 12 Months @ ₹6,960</li>
-        <li>✔ Heavy streaming & gaming</li>
-      </ul>
-      <button>ENQUIRY</button>
-    </div>
-
-    <div class="pricing-card animate jet">
-      <h3>JET FIBER</h3>
-      <span class="speed">1 Gbps</span>
-      <div class="divider"></div>
-      <ul>
-        <li>✔ Unlimited Data</li>
-        <li>✔ Monthly @ ₹1,600</li>
-        <li>✔ 6 Months @ ₹6,960</li>
-        <li>✔ 12 Months @ ₹13,332</li>
-        <li>✔ Enterprise-grade speed</li>
-      </ul>
-      <button>ENQUIRY</button>
-    </div>
-
-  </div>
-</section>
-
-<!-- ================= PLAN DETAILS ================= -->
-<section class="plan-details">
-  <div class="plan-row animate">
-    <h3>Rocket & Rocket 2.0</h3>
-    <p>
-      Designed for residential users, these plans provide stable internet
-      speeds suitable for daily browsing, HD streaming, online classes,
-      and work-from-home usage.
-    </p>
-  </div>
-
-  <div class="plan-row animate right">
-    <h3>Agni & Jet Fiber</h3>
-    <p>
-      Built for power users, offices, and businesses requiring
-      ultra-fast speeds, uninterrupted uptime, secure connectivity,
-      and seamless cloud access.
-    </p>
-  </div>
-</section>
-
-<!-- ================= FEATURES ================= -->
-<section class="section" id="features">
-  <h2 class="section-title">Our Services</h2>
-
-  <div class="features-grid">
-    <div class="feature-card animate">
-      <h4>Fastest Internet</h4>
-      <p>Consistent high-speed connectivity with low latency.</p>
-    </div>
-
-    <div class="feature-card animate">
-      <h4>Quick Installation</h4>
-      <p>Hassle-free installation by trained technicians.</p>
-    </div>
-
-    <div class="feature-card animate">
-      <h4>24×7 Support</h4>
-      <p>Dedicated technical support for uninterrupted service.</p>
-    </div>
-
-    <div class="feature-card animate">
-      <h4>DOT Certified ISP</h4>
-      <p>Government approved and trusted ISP provider.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ================= OTT ================= -->
-<section class="section" id="ott">
-  <h2 class="section-title">OTT Apps Supported</h2>
-
-  <div class="ott-grid">
-    <img src="assets/ott/netflix.png" alt="Netflix">
-    <img src="assets/ott/youtube.png" alt="YouTube">
-    <img src="assets/ott/prime-video.png" alt="Prime">
-    <img src="assets/ott/hotstar.png" alt="Hotstar">
-    <img src="assets/ott/sonyliv.png" alt="Hotstar">
-    <img src="assets/ott/zee5.png" alt="Hotstar">
-  </div>
-</section>
-
-<!-- ================= CONTACT ================= -->
-<section class="contact" id="contact">
-  <h2>Contact Us</h2>
-  <p><strong>Owner:</strong> Yogesh Shilkar</p>
-  <p>📞 9819520514 | 📱 7045525727</p>
-</section>
- <script src="js/main.js"></script>
-<script src="js/theme.js"></script>
+  <script src="js/theme.js"></script>
 </body>
+
 </html>
 
-  <div class="map">
-    <iframe
-      src="https://www.google.com/maps?q=Thane,Maharashtra&output=embed"
-      loading="lazy">
-    </iframe>
-  </div>
-</section>
 
-<!-- ================= FOOTER ================= -->
-<footer class="footer"> 
-</footer>
 
 
 </body>
+
 </html>
