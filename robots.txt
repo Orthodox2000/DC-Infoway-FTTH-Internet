@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://dcinfoway.com/sitemap.xml

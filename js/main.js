@@ -31,3 +31,50 @@ document.addEventListener("DOMContentLoaded", function () {
 
   }, 4000);
 });
+const sections = document.querySelectorAll("section[id], footer[id]");
+const navLinks = document.querySelectorAll(".nav-link");
+
+function setActiveLink() {
+  let scrollPos = window.scrollY + 120; // navbar height offset
+
+  let currentId = "";
+
+  sections.forEach(section => {
+    const top = section.offsetTop;
+    const height = section.offsetHeight;
+
+    if (scrollPos >= top && scrollPos < top + height) {
+      currentId = section.getAttribute("id");
+    }
+  });
+
+  // 🔥 Special case — bottom of page = contact/footer
+  if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 5) {
+    currentId = "contact";
+  }
+
+  navLinks.forEach(link => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === "#" + currentId) {
+      link.classList.add("active");
+    }
+  });
+}
+
+window.addEventListener("scroll", setActiveLink);
+window.addEventListener("load", setActiveLink);
+
+// FAQ Accordion
+
+document.querySelectorAll(".faq-question").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const item = btn.parentElement;
+
+    // close others (optional — remove if you want multiple open)
+    document.querySelectorAll(".faq-item").forEach(f => {
+      if (f !== item) f.classList.remove("active");
+    });
+
+    item.classList.toggle("active");
+  });
+});
