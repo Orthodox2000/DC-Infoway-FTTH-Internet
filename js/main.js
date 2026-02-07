@@ -78,3 +78,17 @@ document.querySelectorAll(".faq-question").forEach(btn => {
     item.classList.toggle("active");
   });
 });
+
+function updateScrollProgress() {
+  const scrollTop = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = (scrollTop / docHeight) * 100;
+
+  const bar = document.getElementById("scrollProgressBar");
+  if (bar) {
+    bar.style.width = progress + "%";
+  }
+}
+
+window.addEventListener("scroll", updateScrollProgress);
+window.addEventListener("load", updateScrollProgress);

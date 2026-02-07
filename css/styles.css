@@ -1216,7 +1216,7 @@ html {
 /* open state */
 
 .faq-item.active .faq-answer {
-  max-height: 200px;
+  max-height: 400px;
   padding-top: 8px;
 }
 
@@ -1231,4 +1231,21 @@ html {
     font-size: 15px;
     padding: 16px;
   }
+}
+
+
+/* ===== Scroll Progress ===== */
+
+.scroll-progress {
+  width: 100%;
+  height: 2px;
+  background: rgba(255,255,255,0.15);
+  overflow: hidden;
+}
+
+.scroll-progress-bar {
+  height: 100%;
+  width: 0%;
+  background: white;
+  transition: width 0.15s linear;
 }
