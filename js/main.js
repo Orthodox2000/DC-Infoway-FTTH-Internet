@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", function () {
     "assets/hero/router2.png",
     "assets/hero/qr.png",
     "assets/hero/cctv.png" ,
-    "assets/hero/images.png",
     "assets/hero/qr.png",
     "assets/hero/laptop.png",
      "assets/hero/ott.png",
