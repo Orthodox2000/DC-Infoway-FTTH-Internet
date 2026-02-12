@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (!img) return;
 
   const images = [
+    "assets/hero/router2.png",
     "assets/hero/qr.png",
     "assets/hero/cctv.png" ,
     "assets/hero/images.png",
