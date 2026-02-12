@@ -6,14 +6,13 @@ document.addEventListener("DOMContentLoaded", function () {
   const images = [
     "assets/hero/router2.png",
     "assets/hero/qr.png",
-    "assets/hero/cctv.png" ,
-    "assets/hero/qr.png",
+    "assets/hero/cctv.png" , 
     "assets/hero/laptop.png",
-     "assets/hero/ott.png",
+     "assets/hero/ott.png"
      
   ];
 
-  let index = 0;
+  let index = 1;
 
   setInterval(() => {
     // Shrink current image
@@ -22,8 +21,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Change image when fully shrunk
     setTimeout(() => {
-      index = (index + 1) % images.length; 
+      
       img.src = images[index];
+      index++;
+      if(index>4)index=0;
 
       img.classList.remove("scale-out");
       img.classList.add("scale-in");
