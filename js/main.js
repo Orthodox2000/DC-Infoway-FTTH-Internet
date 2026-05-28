@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
     "assets/hero/cctv.png" , 
     "assets/hero/laptop.png",
      "assets/hero/ott.png"
-     
   ];
 
   let index = 1;
@@ -21,7 +20,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Change image when fully shrunk
     setTimeout(() => {
-      
       img.src = images[index];
       index++;
       if(index>4)index=0;
@@ -29,7 +27,6 @@ document.addEventListener("DOMContentLoaded", function () {
       img.classList.remove("scale-out");
       img.classList.add("scale-in");
     }, 600);
-
   }, 4000);
 });
 const sections = document.querySelectorAll("section[id], footer[id]");

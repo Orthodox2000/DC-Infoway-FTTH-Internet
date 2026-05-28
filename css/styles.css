@@ -290,7 +290,7 @@ html {
 @keyframes scaleIn {
   from {
     transform: scale(0);
-    opacity: 0;
+    opacity: 1;
   }
   to {
     transform: scale(1);
@@ -298,15 +298,11 @@ html {
   }
 }
 
-/* Mobile */
+/* Mobile Adjustments */
 @media (max-width: 768px) {
   .hero-image-wrapper {
     max-width: 300px;
     margin-top: 2rem;
-  }
-  .container
-  {
-    padding: 1px
   }
 }
 

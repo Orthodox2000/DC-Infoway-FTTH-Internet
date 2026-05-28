@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://dcinfoway.in/sitemap.xml
+Sitemap: https://www.dcinfoway.in/sitemap.xml
